@@ -14,7 +14,7 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
 		System.out.println("% TimeFormat" + args[0]);
-		if (hours > 12)
+		if (hours >= 13)
 		{
 			hours = hours - 12;
 			System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " PM");
