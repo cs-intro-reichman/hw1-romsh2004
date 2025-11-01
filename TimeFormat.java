@@ -14,17 +14,26 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
 		System.out.println("% TimeFormat" + args[0]);
-		if (hours >= 13)
+		if (hours > 12)
 		{
 			hours = hours - 12;
 			System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " PM");
 		}
 		else
 		{
-			if(args[0].charAt(3) == '0')
-			System.out.println(hours%10 + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
+			if(hours == 12)
+			{
+				System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " PM");
+				return;
+			}
+			else if(args[0].charAt(3) == '0')
+				{
+					System.out.println(hours%10 + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
+				}
 			else
-			System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
-		}
+				{
+					System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
+				}
+			}
 	}
 }
