@@ -17,14 +17,14 @@ public class TimeFormat {
 		if (hours > 12)
 		{
 			hours = hours - 12;
-			System.out.println(hours + ":" + minutes + " PM");
+			System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " PM");
 		}
 		else
 		{
 			if(args[0].charAt(3) == '0')
-			System.out.println(hours%10 + ":" + minutes + " AM");
+			System.out.println(hours%10 + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
 			else
-			System.out.println(hours + ":" + minutes + " AM");
+			System.out.println(hours + ":" + args[0].charAt(3) + args[0].charAt(4) + " AM");
 		}
 	}
 }
